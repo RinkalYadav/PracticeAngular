@@ -1,0 +1,36 @@
+<h1>If Else | Control-flow</h1>
+<button (click)="show()">show</button>
+<button (click)="hide()">hide</button>
+@if(display){
+  <div style="height: 200px; width: 200px; background-color: green;"></div>
+}
+<hr>
+<button (click)="togleDiv()">{{togle? 'show red' : 'show yellow'}}</button>
+@if(togle){
+  <div style="height: 200px; width: 200px; background-color: yellow;"></div>
+}
+@else{
+    <div style="height: 200px; width: 200px; background-color: red;"></div>
+}
+
+<hr>
+<hr><hr><hr>
+<button (click)="handleclick(1)">red</button>
+<button (click)="handleclick(2)">yellow</button>
+<button (click)="handleclick(3)">blue</button>
+<button (click)="handleclick(10)">other</button>
+<input type="text" (input)="handleinput($event)" placeholder="enter color number">
+@if(color === 1){
+  <div style="height: 200px; width: 200px; background-color: red;"></div>
+}   
+@else if (color==2) {
+    <div style="height: 200px; width: 200px; background-color: yellow;"></div>
+}
+@else if (color==3) {
+    <div style="height: 200px; width: 200px; background-color: blue;"></div>
+}
+@else{  
+    <div style="height: 200px; width: 200px; background-color: black;"></div>
+}
+
+
